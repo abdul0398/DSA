@@ -16,6 +16,7 @@ public class beutifulMatrix {
                         System.out.println(Math.abs((i + 1) - 3) + Math.abs((j+1) - 3));
 
                     }
+                    
             
                 }
         }
