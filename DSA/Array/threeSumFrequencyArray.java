@@ -1,4 +1,4 @@
-/* QUESTION:
+/* QUESTION: F. 3SUM (Codeforces)
 Given an array a of positive integers with length n,
 determine if there exist three distinct indices i, j, k
  such that ai+aj+ak ends in the digit 3. */
@@ -49,6 +49,3 @@ public class threeSumFrequencyArray {
 
     }
 }
-
-
-
