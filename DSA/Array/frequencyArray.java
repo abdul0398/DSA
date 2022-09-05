@@ -23,7 +23,7 @@ public class frequencyArray {
 // create new freq array with a lenth of maxNo in the array + minNO and +1 for zero
             int[] freq = new int[maxNo + 1 - minNo];
 /*  making each element of the input array as a index of freq array and add one to the element of 
-    frequency array each time an element is present*/
+    frequency array each time an element is present in an input array*/
             for(int i = 0; i < n;i++){
                 freq[arr[i] - minNo ] = freq[arr[i] - minNo] + 1;
             }
