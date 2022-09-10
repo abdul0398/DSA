@@ -15,6 +15,7 @@ import java.util.*;
 public class GregandArrayPrefixArray {
     public static void main(String[] args){
         try (Scanner sc = new Scanner(System.in)) {
+            int size = 10^5;
             int n = sc.nextInt();
             int m = sc.nextInt();
             int k = sc.nextInt();
@@ -31,7 +32,7 @@ public class GregandArrayPrefixArray {
                 r[i] = sc.nextInt();
                 d[i] = sc.nextInt();
             }
-            int[] operation_count = new int[m+2];
+            int[] operation_count = new int[size];
             for(int i = 1; i<=k; ++i ){
                 int x = sc.nextInt();
                 int y = sc.nextInt();
@@ -41,7 +42,7 @@ public class GregandArrayPrefixArray {
             for(int i = 1; i < operation_count.length; i++){
                 operation_count[i] = operation_count[i] + operation_count[i-1];
             }
-            int[] preffix = new int[arr.length+2];
+            int[] preffix = new int[size];
             for(int i = 1; i <= m; ++i){
                 preffix[l[i]] = preffix[l[i]] + d[i]*operation_count[i];
                 preffix[r[i]+1] = preffix[r[i]+1] - d[i]*operation_count[i];
