@@ -1,4 +1,4 @@
-package DSA.Array;
+package DSA.Array.BinarySearch;
 
 public class firstAndLastOcuurence {
     public static void main(String[] args) {
