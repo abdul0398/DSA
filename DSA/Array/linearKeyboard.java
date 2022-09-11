@@ -1,5 +1,5 @@
 package DSA.Array;
-public class practice {
+public class linearKeyboard {
     public static void main(String[] args) {
         keyboard("abcdefghijklmnopqrstuvwxyz", "hello");
     
@@ -12,7 +12,7 @@ public class practice {
             }
             
             for (int i = 0; i < word.length() - 1; i++) {
-                ans = ans + Math.abs(arr[word.charAt(i+1) - 97] - arr[word.charAt(i) - 97 ]);
+                ans = ans + Math.abs(arr[word.charAt( i + 1 ) - 97] - arr[word.charAt(i) - 97 ]);
             }
             System.out.println(ans);
     }
