@@ -24,7 +24,6 @@ public class squareRoot{
         long e = n;
         long mid = s + (e - s) / 2;
         long answer = -1;
-        boolean flag = false;
         while(e >= s){
             if(mid * mid == n){
                 return (int)mid;
