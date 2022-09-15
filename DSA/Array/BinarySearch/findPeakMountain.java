@@ -18,7 +18,7 @@ public class findPeakMountain {
             }
             mid = start + (end - start) / 2;
         } 
-        return start;
+        return end;
     }
 }
 
