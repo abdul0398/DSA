@@ -1,14 +1,6 @@
 package DSA.Array;
 import java.util.*;
 public class practice {
-
-     public static long totalRubles(int cb, int cs, int cc, int nb, int ns, int nc, int mid, int pb, int ps, int pc){
-        long costOfBread =  ((mid * cb)-nb) > 0? ((mid * cb)-nb) * pb : 0;
-        long costOfSousage = ((mid * cs)-ns) > 0? ((mid * cs)-ns) * ps : 0;
-        long costOfcheese = ((mid * cc)-nc) > 0? ((mid * cc)-nc) * pc : 0;
-        long rublesNeeded =  costOfBread + costOfSousage + costOfcheese ;
-        return rublesNeeded;
-}
     public static void main(String[] args) {
         
         
@@ -33,7 +25,11 @@ public class practice {
                 }
             }
               while(end >= start){
-                if(rubles <= rubles){
+                long costOfBread =  ((mid * cb)-nb) > 0? ((mid * cb)-nb) * pb : 0;
+                long costOfSousage = ((mid * cs)-ns) > 0? ((mid * cs)-ns) * ps : 0;
+                long costOfcheese = ((mid * cc)-nc) > 0? ((mid * cc)-nc) * pc : 0;
+                long rublesNeeded =  costOfBread + costOfSousage + costOfcheese ;
+                if(rublesNeeded <= rubles){
                     start = mid + 1;
                     ans = mid;
                 }else{

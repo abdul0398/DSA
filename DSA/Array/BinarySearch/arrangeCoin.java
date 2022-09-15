@@ -1,5 +1,6 @@
 package DSA.Array.BinarySearch;
-
+// important formula is (mid*(mid+1))/2
+// T.C = O(logn)
 public class arrangeCoin {
     public static int arrangeCoinn(int n){
         long start = 0;
