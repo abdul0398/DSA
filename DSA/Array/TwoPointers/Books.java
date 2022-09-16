@@ -1,11 +1,11 @@
-package DSA.Array;
+package DSA.Array.TwoPointers;
 
 import java.util.Scanner;
 
 /**
  * practice
  */
-public class practice {
+public class Books {
 
     public static void main(String[] args) {
         System.out.println(check());
