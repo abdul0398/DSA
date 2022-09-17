@@ -1,10 +1,5 @@
 package DSA.Array.TwoPointers;
-
 import java.util.Scanner;
-
-/**
- * practice
- */
 public class Books {
 
     public static void main(String[] args) {
