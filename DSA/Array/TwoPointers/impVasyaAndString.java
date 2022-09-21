@@ -20,11 +20,11 @@ public class impVasyaAndString {
             int ans = Integer.MIN_VALUE;
             for(int i = 0; i < n; i++ ){
                 if(s.charAt(i) != X){
-                    count++;
+                    k--;
                 }
-                while(count > k){
+                while(k == 0){
                     if(s.charAt(j) != X){
-                        count--;    
+                        k++;    
                     }
                     j++;
                 }

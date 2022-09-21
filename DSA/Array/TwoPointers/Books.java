@@ -20,11 +20,12 @@ public class Books {
             int j = 0;
             for (int i = 0; i < arr.length; i++) {
                 sum += arr[i];
-                book++;
                 if (sum > k) {
                     sum -= arr[j];
-                    book--;
                     j++;
+                }
+                if((i - j + 1) > book){
+                    book = i - j + 1;
                 }
             }
             return book;
