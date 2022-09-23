@@ -16,7 +16,6 @@ public class impVasyaAndString {
             int k = sc.nextInt();
             String s = sc.nextLine();
             int j = 0;
-            int count = 0;
             int ans = Integer.MIN_VALUE;
             for(int i = 0; i < n; i++ ){
                 if(s.charAt(i) != X){
