@@ -1,20 +1,30 @@
 package DSA.Array;
+
+import java.util.*;
+
 public class practice {
     public static void main(String[] args) {
-        int sum = conversion(101010, 2, 10);
-        System.out.println(sum);
-    }
-    public static int conversion(int num, int sb, int rb){
-        int digit = 0;
-        int power = 1;
-        int sum = 0;
-        while(num!=0){
-            digit = num % rb;
-            sum += digit * (power);
-            power = power * sb;
-            num = num / 10;
+        int[] arr = {88,66,55,44,22};
+        int temp = 0;
+// bubble sort 
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1- i; j++) {
+                if (arr[j] > arr[j + 1]){
+                   temp = arr[j];
+                   arr[j] = arr[j + 1];
+                   arr[j + 1] = temp;
+                }else{
+                    continue;
+                }
+            }
+            
         }
-        return sum;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+            
+        }
+
 
     }
+    
 }
