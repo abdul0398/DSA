@@ -4,27 +4,36 @@ import java.util.*;
 
 public class practice {
     public static void main(String[] args) {
-        int[] arr = {88,66,55,44,22};
-        int temp = 0;
-// bubble sort 
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1- i; j++) {
-                if (arr[j] > arr[j + 1]){
-                   temp = arr[j];
-                   arr[j] = arr[j + 1];
-                   arr[j + 1] = temp;
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        char[] arr = new char[str.length()];
+        int i = 1;
+        int j = 0;
+        String str1 = "";
+        while (i <= str.length()) {
+            if (str.charAt(j) == str.charAt(i)) {
+                if (i != str.length() - 1) {
+                    i += 2;
+                    j += 2;
                 }else{
-                    continue;
+                    i++;
+                    j++;
                 }
-            }
-            
-        }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-            
-        }
+            } else {
+                if (i != str.length() - 1) {
 
+                str1 += str.charAt(j);
+                j++;
+                i++;
+            }else{
+                str1 +=str.charAt(i);
+
+            }
+
+            }
+        }
+        System.out.println(str1);
 
     }
-    
+
 }
