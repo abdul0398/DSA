@@ -23,11 +23,7 @@ public class imp_hamburger {
             }
             
               while(end >= start){
-                long costOfBread =  ((mid * cb)-nb) > 0? ((mid * cb)-nb) * pb : 0;
-                long costOfSousage = ((mid * cs)-ns) > 0? ((mid * cs)-ns) * ps : 0;
-                long costOfcheese = ((mid * cc)-nc) > 0? ((mid * cc)-nc) * pc : 0;
-                long rublesNeeded =  costOfBread + costOfSousage + costOfcheese ;
-                if(rublesNeeded <= rubles){
+                if(rublesNeeded(mid,cb,cs,cc,nb,ns,nc,pb,ps,pc) <= rubles){
                     start = mid+1;
                     ans = mid;
                 }else{
@@ -37,5 +33,13 @@ public class imp_hamburger {
             }
             System.out.println(ans);
     }
+}
+        static long rublesNeeded(long mid,long cb,long cs,long cc, int nb, int ns, int nc,int pb, int ps,int pc){
+            long costOfBread =  ((mid * cb)-nb) > 0? ((mid * cb)-nb) * pb : 0;
+            long costOfSousage = ((mid * cs)-ns) > 0? ((mid * cs)-ns) * ps : 0;
+            long costOfcheese = ((mid * cc)-nc) > 0? ((mid * cc)-nc) * pc : 0;
+            long rublesNeeded =  costOfBread + costOfSousage + costOfcheese ;
+            return rublesNeeded;
+
 }
 }

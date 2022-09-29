@@ -3,7 +3,7 @@ package DSA.Array;
 // All sorting algorithm in Arrays.
 public class SortingInArray {
     public static void main(String[] args) {
-        int[] arr = {8,6,5,4,2};
+        //int[] arr = {8,6,5,4,2};
         //int temp = 0;
 // bubble sort 
         // for (int i = 0; i < arr.length - 1; i++) {

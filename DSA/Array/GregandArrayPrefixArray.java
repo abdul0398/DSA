@@ -9,13 +9,12 @@ The first line contains integers n, m, k (1 ≤ n, m, k ≤ 105). Th
 Next m lines contain operations, the operation number i is written as three integers: li, ri, di, (1 ≤ li ≤ ri ≤ n), (0 ≤ di ≤ 105).
 Next k lines contain the queries, the query number i is written as two integers: xi, yi, (1 ≤ xi ≤ yi ≤ m).
 The numbers in the lines are separated by single spaces.*/
-
 package DSA.Array;
 import java.util.*;
 public class GregandArrayPrefixArray {
     public static void main(String[] args){
         try (Scanner sc = new Scanner(System.in)) {
-            int size = 10^5;
+            int size = 100005;
             int n = sc.nextInt();
             int m = sc.nextInt();
             int k = sc.nextInt();
@@ -27,13 +26,13 @@ public class GregandArrayPrefixArray {
             int[] r = new int[m+1];
             int[] d = new int[m+1];
 
-            for(int i = 1;i <= m;++i){
+            for(int i = 1;i <= m; ++i){
                 l[i] = sc.nextInt();
                 r[i] = sc.nextInt();
                 d[i] = sc.nextInt();
             }
             int[] operation_count = new int[size];
-            for(int i = 1; i<=k; ++i ){
+            for(int i = 1; i <= k; ++i ){
                 int x = sc.nextInt();
                 int y = sc.nextInt();
                 operation_count[x] = operation_count[x] + 1;
@@ -44,16 +43,16 @@ public class GregandArrayPrefixArray {
             }
             int[] preffix = new int[size];
             for(int i = 1; i <= m; ++i){
-                preffix[l[i]] = preffix[l[i]] + d[i]*operation_count[i];
-                preffix[r[i]+1] = preffix[r[i]+1] - d[i]*operation_count[i];
+                preffix[l[i]] = preffix[l[i]] + d[i] * operation_count[i];
+                preffix[r[i]+1] = preffix[r[i]+1] - d[i] * operation_count[i];
             }
             for(int i = 1; i < preffix.length; i++){
                 preffix[i] += preffix[i-1];
             }
-            for(int i = 1; i<=n; i++){
+            for(int i = 1; i <= n; i++){
                 arr[i] += preffix[i];
             }
-            for(int i = 1; i<=n; i++){
+            for(int i = 1; i <= n; i++){
                 System.out.println(arr[i] + " ");
             }
         }

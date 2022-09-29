@@ -17,13 +17,14 @@ public class impVasyaAndString {
             String s = sc.nextLine();
             int j = 0;
             int ans = Integer.MIN_VALUE;
+            int count = 0;
             for(int i = 0; i < n; i++ ){
                 if(s.charAt(i) != X){
-                    k--;
+                    count++;
                 }
-                while(k == 0){
+                while(count > k || j <= i){
                     if(s.charAt(j) != X){
-                        k++;    
+                        count--;    
                     }
                     j++;
                 }
