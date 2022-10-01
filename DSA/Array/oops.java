@@ -1,9 +1,7 @@
 package DSA.Array;
-
-import java.util.*;
 public class oops {
     public static void main(String[] args) {
-        practice pr = new practice();
+        new practice();
         Student abdul = new Student();
         Student anas = new Student(13,"anass",86.5f);
         System.out.println(abdul.roll + " " +  anas.roll);

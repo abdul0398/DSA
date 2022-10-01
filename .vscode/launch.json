@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch recurrsion",
+            "request": "launch",
+            "mainClass": "DSA.Array.recurrsion",
+            "projectName": "DSA_21b8e48"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
