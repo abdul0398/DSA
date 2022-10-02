@@ -1,6 +1,7 @@
 package DSA.Array;
 import java.util.*;
 public class LittleGirlandMaximumSum {
+    public static void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
         long n = sc.nextLong();
         long q = sc.nextLong();
@@ -27,4 +28,5 @@ public class LittleGirlandMaximumSum {
         System.out.println(sum);
     }
     
+}
 }
