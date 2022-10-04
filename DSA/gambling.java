@@ -1,7 +1,7 @@
+package DSA;
 import java.util.*;
-
-public class practice {
-    public static void main(String[] args) {
+public class gambling {
+    public static void main(String[] args){
         try (Scanner sc = new Scanner(System.in)) {
             long n =sc.nextLong();
             long[] aa = new long[(int)n];
@@ -55,4 +55,4 @@ public class practice {
             System.out.print(scoreA - scoreB);
         }
     }
-    }
+}
