@@ -14,14 +14,14 @@ public class BuildingPermutation {
 // -3, 5,-3, 3, 3;
         int i = 0;
         try (Scanner sc = new Scanner(System.in)) {
-            int n = sc.nextInt();
-            int[] a = new int[n + 1];
+            long n = sc.nextLong();
+            long[] a = new long[(int)(n + 1)];
             a[0] = Integer.MIN_VALUE;
             for (i = 1; i <= n; i++) {
                 a[i] = sc.nextInt();
             }
             Arrays.sort(a);
-            int count = 0;
+             int count = 0;
             for (i = 1; i <= n; i++){
                 count += Math.abs(a[i] - i);
             }

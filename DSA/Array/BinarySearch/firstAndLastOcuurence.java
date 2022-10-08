@@ -2,9 +2,9 @@ package DSA.Array.BinarySearch;
 
 public class firstAndLastOcuurence {
     public static void main(String[] args) {
-        int[] array = new int[]{1,2,2,3,4,6,7};
-        int firstIndex = firstOccurence(7, 2, array);
-        int lastIndex =lastOccurence(array, 7, 2);
+        int[] array = new int[]{6,9};
+        int firstIndex = firstOccurence(2, 9, array);
+        int lastIndex =lastOccurence(array, 2, 9);
         System.out.println("first occurence is --> " + firstIndex + "\nlast occurence is --> " + lastIndex);
     }
 

@@ -1,4 +1,4 @@
-package DSA.Array.BinarySearch;
+package BinarySearch;
 
 public class binarySearch {
 

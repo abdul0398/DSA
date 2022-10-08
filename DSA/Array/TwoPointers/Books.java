@@ -1,4 +1,3 @@
-package DSA.Array.TwoPointers;
 import java.util.Scanner;
 public class Books {
 

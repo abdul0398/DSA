@@ -1,5 +1,3 @@
-package DSA.Array;
-
 import java.util.Arrays;
 
 public class ArrayPartition {
@@ -7,7 +5,6 @@ public class ArrayPartition {
 // time complexity is O(nlogn)
         int[] arr = new int[]{1,4,3,2};
         Arrays.sort(arr);
-         System.out.println(arr[1]);
         int sum = 0;
         for (int i = 0; i < arr.length; i = i+2) {
             sum = sum + arr[i];
@@ -26,12 +23,14 @@ public class ArrayPartition {
         for (int i = 0; i < arr.length; i++) {
             freq[arr[i] - min ] = freq[arr[i] - min] + 1;
         }
-        System.out.println(freq[5]);
         int ans = 0;
         int residue = 0;
+        int trackFrequency = 0;
         for (int i = min; i <= max ; i++) {
-            ans = ans + (freq[i - min] + 1 - residue) / 2;
-            residue = (freq[i - min] + residue) % 2;
+            ans = ans + (freq[i - min] + 1) / 2 - residue;
+            trackFrequency += (freq[i - min] + 1) / 2;
+            residue = trackFrequency % 2;
+            
         }
         return ans;
     }

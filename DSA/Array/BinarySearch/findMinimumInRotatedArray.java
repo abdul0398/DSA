@@ -11,7 +11,7 @@ You must write an algorithm that runs in O(log n) time.
  */
 
 
-package DSA.Array.BinarySearch;
+package BinarySearch;
 public class findMinimumInRotatedArray{
     public static void main(String[] args) {
         int[] nums = new int[]{2,3,4,5,1};
