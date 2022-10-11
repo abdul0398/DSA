@@ -1,3 +1,5 @@
+package DSA.Array;
+
 import java.util.*;
 public class DevuAndHisBrother {
     public static void main(String[] args) {

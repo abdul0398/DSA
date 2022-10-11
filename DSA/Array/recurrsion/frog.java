@@ -1,4 +1,4 @@
-package DSA.Array.recurrsion;
+package recurrsion;
 
 /*There are N stones, numbered 1,2,…,N. For each i (1≤i≤N), the height of Stone i is hi
 There is a frog who is initially on Stone 1. He will repeat the 
@@ -24,10 +24,10 @@ public class frog {
     //     if(i >= n){
     //         return 0;
     //     }
-    //     int op1 = Math.abs(arr[i] - arr[i + 1]) + frog(arr, i+1, n);
+    //     int op1 = Math.abs(arr[i] - arr[i + 1]) + frog(arr, i + 1, n);
     //     int op2 = Integer.MAX_VALUE;
     //     if(i + 2 <= n){
-    //     op2 = Math.abs(arr[i] - arr[i+2]) + frog(arr, i + 2, n);
+    //     op2 = Math.abs(arr[i] - arr[i + 2]) + frog(arr, i + 2, n);
     //     }
     //     return Math.min(op1, op2);
     
@@ -47,9 +47,8 @@ static int frog2(int arr[], int i, int n, int k){
             return 0;
 
         }
-
     int ans = Integer.MAX_VALUE;
-    for (int j = 1; j < k; j++){
+    for (int j = 1; j <= k; j++){
         if(i + j <= n - j){
         ans = Math.min(ans , arr[i] - arr[i + j]) + frog2(arr,i + j, n , k);
         }

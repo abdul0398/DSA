@@ -1,4 +1,4 @@
-package DSA.Array;
+package BinarySearch;
 import java.util.*;
 public class imp_hamburger {
     public static void main(String[] args) {

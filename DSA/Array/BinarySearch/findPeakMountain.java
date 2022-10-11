@@ -1,4 +1,4 @@
-package DSA.Array.BinarySearch;
+package BinarySearch;
 
 public class findPeakMountain {
     public static void main(String[] args) {

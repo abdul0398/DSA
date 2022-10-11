@@ -17,7 +17,7 @@ public class vasyaAndString {
             System.out.println(Arrays.toString(arr));
             for (int i = 0; i < ch.length / 2; i++) {
               if(arr[i] % 2 == 1){
-                char temp = ch[i];1
+                char temp = ch[i];
                 ch[i] = ch[(ch.length - i - 1)];
                 ch[(ch.length - i - 1)] = temp;
               }
