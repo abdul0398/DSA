@@ -20,11 +20,9 @@ class compute{
         }
         for(int i = 0; i < m; i++){
             if(freq2[(int)a2[i]] == 0){
-                freq2[(int)a2[i]] += 1;
                 count++;
-            }else{
-                freq2[(int)a2[i]] += 1;
             }
+                freq2[(int)a2[i]] += 1;
         }
         int sum = 0;
         for(int i = 0; i < freq1.length; i++){

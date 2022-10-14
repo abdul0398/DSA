@@ -1,4 +1,6 @@
-public class practice {
+package recurrsion;
+
+public class knapsach {
     public static void main(String[] args) {
         int[] val = {60, 100, 120};
         int[] weight = {10, 20, 30};
@@ -13,11 +15,10 @@ public class practice {
           return knapsack(capacity, i + 1, val, weight); 
         }
       
-      
+      // knapsach unbounded 
         int op1 = val[i] + knapsack(capacity - weight[i], i, val, weight);
         int op2 = knapsack(capacity, i + 1, val, weight);
         return Math.max(op1,op2);
     }
 
 }
-
