@@ -27,6 +27,7 @@ public class spiral2darray {
                         top++;
                         direc = 2;
                     }
+                }
                     if (count > 0) {
                         if (direc == 2) {
                             for (int i = top; i <= bottom; i++) {
@@ -47,7 +48,6 @@ public class spiral2darray {
                             direc = 4;
                         }
                     }
-                }
                 if (count > 0) {
                     if (direc == 4) {
                         for (int i = bottom; i >= top; i--) {
@@ -63,3 +63,4 @@ public class spiral2darray {
         }
     }
 }
+
