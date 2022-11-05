@@ -1,5 +1,4 @@
-import java.util.*;
-public class practice {
+public class mergeSort {
     static int[] merge(int[] num, int lo, int hi){
         if(lo == hi){
             int[] br = new int[1];
@@ -10,12 +9,12 @@ public class practice {
         int mid = (lo + hi) / 2;
         int[] fh = merge(num, lo, mid);
         int[] sh = merge(num, mid + 1, hi);
-        int [] merges = mergeSort(fh, sh);
+        int [] merges = mergeSoort(fh, sh);
         return merges;
 
     }
 
-    static int[] mergeSort(int[] nums1, int[] nums2){
+    static int[] mergeSoort(int[] nums1, int[] nums2){
         int[] res = new int[nums1.length + nums2.length];
         int i = 0;
         int j = 0;
@@ -54,3 +53,4 @@ public class practice {
         
     }
 }
+

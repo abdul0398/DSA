@@ -30,7 +30,7 @@ public class main {
        list.insertLast(3);
        list.insertLast(2);
        list.display();
-       list.delete(0);
+       list.reverse(list.head);
        list.display();
 
     }

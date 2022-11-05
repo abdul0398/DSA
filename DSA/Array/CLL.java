@@ -1,6 +1,6 @@
 
 public class CLL {
-    private node head;
+    public node head;
     private node tail;
 
     public void insertLast(int val){
@@ -28,34 +28,17 @@ public class CLL {
         System.out.println("END");
     }
 
-    public void delete(int val){
-        node node = head;
-        if(node == null){
+    public void reverse(node head){
+        node temp = head.next;
+        if(temp.next == null){
+            temp.next = head;
             return;
         }
-        if(node.val == val){
-            tail.next = node.next;
-            head = tail.next;
-            return;
-        }
-        do {
-            node n = node.next;
-            if(n.val == val){
-                node.next = n.next;
-                break;
-            } 
-            node = node.next;
-            
-        } while (node != head);
-         
-
-
-
-
+        reverse(head.next);
+        temp.next = head;
+        head.next = null;
+        return;
     }
-
-
-
         private class node{
             int val;
             node next;
