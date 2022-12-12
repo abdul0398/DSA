@@ -28,18 +28,17 @@ public class CLL {
         System.out.println("END");
     }
 
-    public void reverse(node head){
-        node temp = head.next;
-        if(temp.next == null){
-            temp.next = head;
-            return;
+    public node reverse(node head){
+        if(head == null || head.next == null){
+            return head;
         }
-        reverse(head.next);
-        temp.next = head;
-        head.next = null;
-        return;
+        node nextNode = reverse(head.next);
+        node c = head;
+        c.next.next = c;
+        c.next = null;
+        return nextNode;
     }
-        private class node{
+        static private class node{
             int val;
             node next;
 

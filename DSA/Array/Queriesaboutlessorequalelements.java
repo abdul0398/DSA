@@ -1,4 +1,3 @@
-package DSA.Array;
 import java.util.*;
 public class Queriesaboutlessorequalelements {
     public static void main(String[] args) {

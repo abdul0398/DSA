@@ -11,9 +11,7 @@ public class mergeSort {
         int[] sh = merge(num, mid + 1, hi);
         int [] merges = mergeSoort(fh, sh);
         return merges;
-
     }
-
     static int[] mergeSoort(int[] nums1, int[] nums2){
         int[] res = new int[nums1.length + nums2.length];
         int i = 0;
@@ -33,15 +31,13 @@ public class mergeSort {
                 i++;
                 k++;
             }
-        }
-       
+        }   
             while(j < nums2.length){
                 res[k++] = nums2[j++];
             }
             while(i < nums1.length){
                 res[k++] = nums1[i++];
             }
-        
         return res;
     }
     public static void main (String args[]) {
@@ -50,7 +46,6 @@ public class mergeSort {
         for(int i : res){
             System.out.println(i);
         }
-        
     }
 }
 

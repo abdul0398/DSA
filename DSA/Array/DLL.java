@@ -24,11 +24,10 @@ public class DLL {
 
 
 
-    private class node{
+     public class node{
         int val;
         node next;
         node prev;
-
 
         node(int val){
             this.val = val;
