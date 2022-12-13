@@ -24,7 +24,6 @@ public class BST {
         inorder(node.left);
         System.out.print(node.data + " ");
         inorder(node.right);
-
     }
     static public void preorder(Node node){
         if(node == null){
@@ -33,7 +32,6 @@ public class BST {
         System.out.print(node.data + " ");
         inorder(node.left);
         inorder(node.right);
-
     }
 // build BST from a sorted array;
     static Node buildTree(int[] arr,int start,int end){
@@ -42,7 +40,6 @@ public class BST {
         }
         int mid = (end + start) / 2;
         Node node = new Node(arr[mid]);
-
         node.left = buildTree(arr, start, mid - 1);
         node.right = buildTree(arr, mid + 1, end);
         return node;
@@ -59,43 +56,48 @@ public class BST {
             return;
         }
         KthSmallest(node.left,k,res);
-
     }
-    // iterator for BST 
+// iterator for BST which can start from low and also can start from end, with using reverse variable; 
     static class BSTIterator{
         private Stack<Node> s = new Stack<>();
-        BSTIterator(Node root){
+        //reverse used to decide the direction of iteration
+        boolean reverse;
+        BSTIterator(Node root,boolean isreverse){
+            reverse = isreverse;
+            goLeft(root);
+        }
+        private void goLeft(Node root){
             while(root != null){
                 s.push(root);
-                root = root.left;
+                root = reverse == true?root.right:root.left;
             }
-
         }
         public int next(){
-            Node n = s.pop();
-            int val = n.data;
-            Node right = n.right;
-            while (right != null ){
-                s.push(right);
-                right = right.left;
-            }
-            return val;
+            Node node = s.pop();
+            if(reverse == false){goLeft(node.right);}
+            else{goLeft(node.left);}
+            return node.data;
         }
         public boolean hasNext(){
             return !s.isEmpty();
         }
-
+    }
+    static class Nodes{
+        int size, max, min;
+        Nodes(int max, int min, int size){
+            this.max = max;
+            this.min = min;
+            this.size = size;
+        }
     }
     public static void main(String[] args) {
-        int[] arr = new int[]{1,5,7,8,10,12};
-        Arrays.sort(arr);
-        Node node = buildTree(arr, 0, 5);
+        int[] arr = new int[]{1,2,3,5,4};
+        Node node = buildTree(arr, 0, 4);
         // preorder(node);
         // int[] res = new int[1];
         // solve(node, new int[]{3},res);
         // System.out.println(res[0]);
-        BSTIterator b = new BSTIterator(node);
-       System.out.println(b.next());
-
+        //BSTIterator b = new BSTIterator(node,false);
+       //System.out.println(b.next());
     }
 }

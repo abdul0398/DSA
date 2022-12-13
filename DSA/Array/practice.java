@@ -1,36 +1,38 @@
 import java.util.*;
 public class practice {
-    static boolean check(int capacity,int[] weights,int minDays){
-        int sum = 0;
-        int days = 1;
-        for(int i = 0; i < weights.length; i++){
-            if(sum + weights[i] <= capacity){
-                sum += weights[i];
-            }else{
-                days++;
-                sum = weights[i];
+	public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+        }
+		//int a = sc.nextInt();
+		//int b = sc.nextInt();
+		int[] arr = {62,2,8,10,11,7,2};
+		int[] dep= {10,10,8,9,12,13,10,13};
+		// for(int i = 0; i < a; i++){
+		// 	arr[i] = sc.nextInt();
+		// }
+		// for(int i = 0; i < b; i++){
+		// 	dep[i] = sc.nextInt();
+		// }
+		Arrays.sort(arr);
+        Arrays.sort(dep);
+        int i = 1;
+        int j = 0;
+        int plat = 1;
+        int res = 1;
+        while(i < arr.length && j < arr.length){
+            if(arr[i] < dep[j]){
+                i++;
+                while(i == i + 1){i++;}
+            }else if(arr[i] >= dep[j]){
+                plat++;
+                j++;
+                while(j == j+1){j++;}
             }
-            if(days > minDays){
-                return false;
+            if(res < plat){
+                res = plat;
             }
         }
-        return true;
+      System.out.println(res);
 
     }
-    public int shipWithinDays(int[] weights, int days) {
-        int low = 1;
-        int high = 10000000;
-        while(low < high){
-            int mid = low + (high - low) / 2;
-            if(check(mid,weights,days)){
-                high = mid;
-            }else{
-                low = mid + 1;
-            }
-        }
-        return low;
-    }
-	public static void main(String[] args) {
-	System.out.println(check(4,new int[]{1,2,3,1,1}, 4));
-	}
 }
