@@ -1,5 +1,3 @@
-package DSA.Array;
-
 // All sorting algorithm in Arrays.
 public class SortingInArray {
     public static void main(String[] args) {
